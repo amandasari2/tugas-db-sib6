@@ -1,4 +1,5 @@
 Nama : Amanda Sari (Group 4)
+Program : Akademi Fullstack Web Developer
 
 Soal 2.1
 1.
