@@ -105,15 +105,15 @@ INNER JOIN vendor v ON
 3.
 CREATE VIEW View_Pesanan_Pelanggan_Produk AS
 SELECT
-    pesanan.id AS pesanan_id,
-    pesanan.tanggal AS tanggal_pesanan,
-    pesanan.total AS total_pesanan,
-    pelanggan.nama AS nama_pelanggan,
-    produk.kode AS kode_produk,
-    produk.nama AS nama_produk,
-    jenis_produk.nama AS jenis_produk,
-    pesanan_items.qty AS jumlah_pesanan,
-    pesanan_items.harga AS harga_satuan
+    pesanan.id AS id,
+    pesanan.tanggal AS tanggal,
+    pesanan.total AS total,
+    pelanggan.nama AS nama,
+    produk.kode AS kode,
+    produk.nama AS nama,
+    jenis_produk.nama AS nama,
+    pesanan_items.qty AS qty,
+    pesanan_items.harga AS harga_jual
 FROM
     pesanan
     INNER JOIN pelanggan ON pesanan.pelanggan_id = pelanggan.id
