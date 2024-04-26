@@ -133,9 +133,6 @@ MariaDB [dbpos_sib6]> insert into produk (id,kode,nama,harga_beli,harga_jual,sto
 Query OK, 3 rows affected, 4 warnings (0.013 sec)
 Records: 3  Duplicates: 0  Warnings: 4
 
-MariaDB [dbpos_sib6]> commit;
-Query OK, 0 rows affected (0.004 sec)
-
 MariaDB [dbpos_sib6]> select * from produk;
 +----+--------+-------------------+------------+------------+------+----------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 | id | kode   | nama              | harga_beli | harga_jual | stok | min_stok | foto                   | deskripsi                                                                                                                                                                                                           | jenis_produk_id |
@@ -171,9 +168,6 @@ MariaDB [dbpos_sib6]> select * from produk;
 MariaDB [dbpos_sib6]> UPDATE produk SET stok = 50 where id = 48;
 Query OK, 1 row affected (0.007 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
-
-MariaDB [dbpos_sib6]> commit;
-Query OK, 0 rows affected (0.000 sec)
 
 MariaDB [dbpos_sib6]> select * from produk;
 +----+--------+-------------------+------------+------------+------+----------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
@@ -212,6 +206,9 @@ Query OK, 0 rows affected (0.001 sec)
 
 MariaDB [dbpos_sib6]> DELETE from pembayaran where id = 4;
 Query OK, 1 row affected (0.018 sec)
+
+MariaDB [dbpos_sib6]> ROLLBACK;
+Query OK, 0 rows affected (0.001 sec)
 
 MariaDB [dbpos_sib6]> select * from pembayaran;
 +----+------------+------------+--------+------+------------+-------------------+
